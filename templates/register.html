@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+            crossorigin="anonymous"></script>
+    <title>Title</title>
+</head>
+<body>
+<div class="container">
+    <div class="row mt-5">
+        <h1>회원가입</h1>
+    </div>
+    <div class="row mt-5">
+        <div class="col-12">
+            <form method="post" action=".">
+                <div class="form-group">
+                    <label for="userid">ID</label>
+                    <input type="text" class="form-control" id="userid" placeholder="사용자 이름" name="userid"/>
+                </div>
+                <div class="form-group">
+                    <label for="username">사용자이름</label>
+                    <input type="text" class="form-control" id="username" placeholder="사용자 이름" name="username"/>
+                </div>
+                <div class="form-group">
+                    <label for="userpw">비밀번호</label>
+                    <input type="password" class="form-control" id="userpw" placeholder="비밀번호" name="userpw"/>
+                </div>
+                <div class="form-group">
+                    <label for="re-userpw">비밀번호 확인</label>
+                    <input type="password" class="form-control" id="re-userpw" placeholder="비밀번호 확인" name="re-userpw"/>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary">등록</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
