@@ -1,14 +1,31 @@
 import os
 
-from flask import Flask, render_template
-from models import db
+from flask import Flask, render_template, request, redirect
+from models import db, Fcuser
 
 app = Flask(__name__)
 
 
-@app.route('/register')
+@app.route('/register', methods=['GET', 'POST'])
 def register():
+    if request.method == 'POST':
+        userid = request.form.get("userid")
+        username = request.form.get("username")
+        userpw = request.form.get("userpw")
+        re_userpw = request.form.get("re_userpw")
+        if not (userid and username and userpw and re_userpw) and userpw == re_userpw:
+            return render_template('register.html')
+
+        fcuser = Fcuser()
+        fcuser.userid = userid
+        fcuser.username = username
+        fcuser.password = userpw
+
+        db.session.add(fcuser)
+        db.session.commit()
+        return redirect('/')
     return render_template('register.html')
+
 
 @app.route('/')
 def hello_world():
